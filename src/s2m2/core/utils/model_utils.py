@@ -36,6 +36,7 @@ def load_model(pretrain_path, model_type, use_positivity=True, refine_iter=3, de
     )
 
     try:
+        print(f"Loading model from {ckpt_path} ...")
         checkpoint = torch.load(ckpt_path, weights_only=True)
         model.my_load_state_dict(checkpoint["state_dict"])
         model.eval()
@@ -45,7 +46,7 @@ def load_model(pretrain_path, model_type, use_positivity=True, refine_iter=3, de
         return model
     except Exception as e:
         print(f"Error loading model: {e}")
-        return None
+        raise e
 
 @torch.no_grad()
 def run_stereo_matching(model, left_torch, right_torch, device, N_repeat=1):
