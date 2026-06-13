@@ -168,9 +168,9 @@ mkdir weights/pretrain_weights
 | **L** | [Download](https://huggingface.co/minimok/s2m2/resolve/main/CH256NTR3.pth) | 181M | 
 | **XL**| [Download](https://huggingface.co/minimok/s2m2/resolve/main/CH384NTR3.pth) | 406M | 
 
-> **モモ収穫プロジェクト用の重み (`stereo_node` が使う `CH384NTR3.pth` ≒ 1.6GB) は上記
-> HuggingFace 版とは別物**。Google Drive で配布しており、取得/更新手順は
-> [`weights/README.md`](weights/README.md) を参照。
+> **モモ収穫プロジェクトでは `stereo_node` が使う `CH384NTR3.pth` を Google Drive で配布**
+> している(この repo は public fork で git-lfs push 不可のため)。デフォルト重みそのままで
+> リンク公開。取得/更新手順は [`weights/README.md`](weights/README.md) を参照。
 
 ### 2. Run Basic Demo
 To generate a result for a single input, run `demo/visualize_2d_simple.py`.
